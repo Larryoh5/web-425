@@ -1,0 +1,27 @@
+<br /><br /><br />
+<!-- sign-in form -->
+<div class="card mt-5" style="width: 35%; margin: 0 auto;">
+  <div class="card-body">
+    <h3 class="card-title">Sign in</h3>
+    <form class="card-text">
+      <!-- username -->
+      <div class="form-group">
+        <label for="txtUserName">Username</label>
+        <input type="text" class="form-control" id="txtUserName" placeholder="Enter username" />
+      </div>
+
+      <!-- password -->
+      <div class="form-group">
+        <label for="txtPassword">Password</label>
+        <input type="password" class="form-control" id="txtPassword" placeholder="Enter your password" />
+      </div>
+
+      <br />
+
+      <!-- submit button -->
+      <div class="form-group">
+        <button class="btn btn-primary" (click)="signIn()">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
