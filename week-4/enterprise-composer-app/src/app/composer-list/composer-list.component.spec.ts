@@ -6,28 +6,29 @@
  */
 
 
-import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ComposerListComponent } from './composer-list.component';
+ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-describe('ComposerListComponent', () => {
-  let component: ComposerListComponent;
-  let fixture: ComponentFixture<ComposerListComponent>;
+ import { ComposerListComponent } from './composer-list.component';
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ ComposerListComponent ]
-    })
-    .compileComponents();
-  });
+ describe('ComposerListComponent', () => {
+   let component: ComposerListComponent;
+   let fixture: ComponentFixture<ComposerListComponent>;
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(ComposerListComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+   beforeEach(async () => {
+     await TestBed.configureTestingModule({
+       declarations: [ ComposerListComponent ]
+     })
+     .compileComponents();
+   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+   beforeEach(() => {
+     fixture = TestBed.createComponent(ComposerListComponent);
+     component = fixture.componentInstance;
+     fixture.detectChanges();
+   });
+
+   it('should create', () => {
+     expect(component).toBeTruthy();
+   });
+ });

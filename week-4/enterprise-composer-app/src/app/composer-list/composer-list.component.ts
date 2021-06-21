@@ -10,6 +10,7 @@
  import { ComposerService } from '../composer.service';
  import { FormControl } from '@angular/forms';
  import { debounceTime } from 'rxjs/operators';
+ import { Observable } from 'rxjs';
 
  @Component({
    selector: 'app-composer-list',
@@ -25,13 +26,15 @@
      /**Dependency injections to create a new instance of the composer service */
      this.composers = this.composerService.getComposers();
      //Method that handles the value change
-     this.txtSearchControl.valueChanges.pipe(debounceTime(500)).subscribe(val => this.filterComposers(val));
-    }
+     this.txtSearchControl.valueChanges
+     .pipe(debounceTime(500))
+     .subscribe((val) => this.filterComposers(val));
+ }
 
-    ngOnInit(): void {
-    }
+ ngOnInit(): void {}
 
-    filterComposers(name: string) {
-      alert(name);
+ filterComposers(name: string) {
+   this.composers = this.composerService.filterComposers(name);
+
     }
   }

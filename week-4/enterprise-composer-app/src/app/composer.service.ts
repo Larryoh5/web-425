@@ -7,6 +7,10 @@
 
 import { Injectable } from '@angular/core';
 import { IComposer } from './composer.interface';
+//import statements for rxjs
+import { Observable } from 'rxjs';
+import { of } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -26,15 +30,24 @@ constructor(){
     ];
   }
 // Gets composers
-getComposers() {
-  return this.composers;
+getComposers(): Observable<IComposer[]> {
+  return of(this.composers);
 }
 
+// gets one composer with matching ID
 getComposer(composerId: number) {
   for (let composer of this.composers) {
     if (composer.composerId === composerId) {
       return composer;
     }
-   }
-   return {} as IComposer;}
- }
+  }
+  return {} as IComposer;
+}
+
+// filters composers by matching an input
+filterComposers(name: string): Observable<IComposer[]> {
+  return of(this.composers).pipe(map(composers =>
+    composers.filter(composer =>
+      composer.fullName.toLowerCase().indexOf(name) > -1)))
+}
+}
