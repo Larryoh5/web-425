@@ -1,0 +1,16 @@
+/**
+ * * Title: app.component.css
+ * Author: Larry Ohaka
+ * Date: 6/25/21
+ * Description: Navigation and Layout
+ */
+
+.logo {
+  margin-top: 5px;
+}
+.main-container {
+  padding-top: 25px;
+  width: 80%;
+  margin: 0 auto;
+
+}
