@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 import { BooksService } from '../books.service';
 import { IBook } from '../book.interface';
 import { Observable } from 'rxjs';
-import { MatDialog } from 'angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { BookDetailsDialogComponent } from '../book-details-dialog/book-details-dialog.component';
 
 @Component({

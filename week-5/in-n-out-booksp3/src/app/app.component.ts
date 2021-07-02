@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title = 'in-n-out-booksp3';
   //assignment variable thats a string variable
   assignment: string;
 
