@@ -7,18 +7,15 @@
 
  import { Component, OnInit, Input } from '@angular/core';
 
- @Component({
-   selector: 'app-gpa',
-   templateUrl: './gpa.component.html',
-   styleUrls: ['./gpa.component.css']
- })
- export class GpaComponent implements OnInit {
+@Component({
+  selector: 'app-gpa',
+  templateUrl: './gpa.component.html',
+  styleUrls: ['./gpa.component.css'],
+})
+export class GpaComponent implements OnInit {
+  //@ts-ignore
+  @Input() gpaTotal: number;
+  constructor() {}
 
-   @Input() gpaTotal: number;
-
-   constructor() { }
-
-   ngOnInit(): void {
-   }
-
- }
+  ngOnInit(): void {}
+}
